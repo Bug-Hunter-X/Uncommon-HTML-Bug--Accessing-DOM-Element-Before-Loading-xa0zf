@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Attempting to access an element that doesn't exist yet
+    document.getElementById("myDiv").style.display = "none"; 
+    //This will cause an error if the script runs before the div is fully parsed.
+    //Solution:Ensure the script is placed at the end of body or use DOMContentLoaded event.
+  </script>
+</body>
+</html>
