@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Solution 1: Placing script at the end of the body
+    //The script now runs after the div element is parsed
+    document.getElementById("myDiv").style.display = "none";
+  </script>
+  </body>
+</html>
